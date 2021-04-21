@@ -1,4 +1,4 @@
-# Template project for CDI's Collaborative MR Platform
+# Collaborative MR Platform
 
 ## Basic Usage
 **Note: This part of the guide is a prerequisite for any recipes below.**
