@@ -1,72 +1,15 @@
-# Collaborative MR Platform
+![A photo of an autonomous car testing tool developed using the platform.](./images/teaser.png)
 
-## Basic Usage
-**Note: This part of the guide is a prerequisite for any recipes below.**
+Welcome to the MR Platform wiki! The Collaborative MR Platform of CDI is a research platform that supercharges virtual reality with **physical-virtual object correspondence** and **multi-user collaboration** capabilities. This is achieved by combining motion tracking with VR using custom software in Unity, which supports a wide variety of research cases.
 
-Creating a project for the MR platform is simple. (But I need more time to write this tutorial.)
+## A first look
+Before you get started at developing your application, it's better to take a look at the [platform architecture](Platform-Architecture). The linked page explains how the multiple systems are connected to function together, and discusses the possibility of extending this platform with your own soft/hardware.
 
-## Recipes
-Here are some commonly used set-ups when developing a new project.
+But, long story short, here's a diagram of the architecture for your reference:
 
-### I just want motion tracking!
-Motive already provides pretty good support for tracking markers, so you will not need Unity for this recipe.
-This is commonly used for experiments in wearble devices or any studies of human motion.
-The full guide can be found [here]()
+![Architecture](./images/architecture.png)
 
-#### You will need:
-* Motive calibrated and running.
-* Markers
-
-#### Summary of steps:
-1. Place markers on places you want to track.
-2. Hit RECORD in Motive software.
-3. Cleanup tracks as best as you can.
-4. Export the data into CSV and do further clean-up.
-
-### Vanilla MR
-This recipe is the basic setup for an interactive MR scene, consisting of virtual VR objects as well as motion-tracked physical objects.
-The full guide can be found [here]()
-
-#### You will need:
-* Motive calibrated and running.
-* Unity
-* Markers
-* An additional client PC to deploy to.
-
-#### Summary of steps:
-1. Place markers on objects you want to track.
-2. Add each object as Rigid Body in Motive, and configure pivot points.
-3. Copy the Unity project template. Set up project path and NetworkManager.
-4. Add models into the Unity scene. Attach the OptitrackRigidBody script to objects, and fill in the User IDs.
-5. Add virtual assets and do all the Unity stuff you need.
-6. Package for client deployment.
-
-### Collaborative MR
-#### You will need:
-* Motive calibrated and running.
-* Unity
-* Markers
-* Multiple client PCs to deploy to.
-
-#### Summary of steps:
-1. Do steps 1-4 of Vanilla MR.
-2. For dynamic virtual assets, make prefabs, then use the provided script to turn them into asset bundles.
-3. Add static virtual assets and do all the Unity stuff you need.
-4. Package client programs for each machine and deploy.
-
-### Screen-based Interactions
-TODO.
-
-### Interactive Projection Mapping
-TODO.
-
-
-## Set up from scratch
-This section describes the process of bootstrapping the MR platform from scratch. It has quite some caveats, so please follow this guide carefully. 
-
-### Requirements
-* A Windows PC with a decent enough graphics card (> 1060 3GB).
-* Set up the Oculus app.
-* [Install XAMPP](https://www.apachefriends.org/index.html) (preferably on the D: drive).
-
-More TBD.
+## Getting started
+| I'm a developer! | I'm the admin! |
+|:----------------:|:--------------:|
+| ![dev](./images/dev.png) <br> [Read the tutorial]() <br> [See the docs]() | ![admin](./images/admin.png) <br> [Read the <br> admin manual]() |
